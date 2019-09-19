@@ -2,24 +2,24 @@
   "kind": "Template",
   "apiVersion": "v1",
   "metadata": {
-    "name": "django-example",
+    "name": "django-psql-example",
     "annotations": {
-      "openshift.io/display-name": "Django",
-      "description": "An example Django application with no database. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/django-ex/blob/master/README.md.",
+      "openshift.io/display-name": "Django + PostgreSQL (Ephemeral)",
+      "description": "An example Django application with a PostgreSQL database. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/django-ex/blob/master/README.md.\n\nWARNING: Any data stored will be lost upon pod destruction. Only use this template for testing.",
       "tags": "quickstart,python,django",
       "iconClass": "icon-python",
-      "openshift.io/long-description": "This template defines resources needed to develop a Django based application, including a build configuration and application deployment configuration.  It does not include a database.",
+      "openshift.io/long-description": "This template defines resources needed to develop a Django based application, including a build configuration, application deployment configuration, and database deployment configuration.  The database is stored in non-persistent storage, so this configuration should be used for experimental purposes only.",
       "openshift.io/provider-display-name": "Red Hat, Inc.",
       "openshift.io/documentation-url": "https://github.com/sclorg/django-ex",
       "openshift.io/support-url": "https://access.redhat.com",
       "template.openshift.io/bindable": "false"
     }
   },
+  "message": "The following service(s) have been created in your project: ${NAME}, ${DATABASE_SERVICE_NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/django-ex/blob/master/README.md.",
   "labels": {
-      "template": "django-example",
-      "app": "django-example"
+      "template": "django-psql-example",
+      "app": "django-psql-example"
   },
-  "message": "The following service(s) have been created in your project: ${NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/django-ex/blob/master/README.md.",
   "objects": [
     {
       "kind": "Secret",
@@ -28,6 +28,8 @@
         "name": "${NAME}"
       },
       "stringData" : {
+        "database-user" : "${DATABASE_USER}",
+        "database-password" : "${DATABASE_PASSWORD}",
         "django-secret-key" : "${DJANGO_SECRET_KEY}"
       }
     },
@@ -37,7 +39,8 @@
       "metadata": {
         "name": "${NAME}",
         "annotations": {
-          "description": "Exposes and load balances the application pods"
+          "description": "Exposes and load balances the application pods",
+          "service.alpha.openshift.io/dependencies": "[{\"name\": \"${DATABASE_SERVICE_NAME}\", \"kind\": \"Service\"}]"
         }
       },
       "spec": {
@@ -133,7 +136,7 @@
           }
         ],
         "postCommit": {
-          "script": "./manage.py test"
+           "script": "./manage.py test"
         }
       }
     },
@@ -149,7 +152,7 @@
       },
       "spec": {
         "strategy": {
-          "type": "Rolling"
+          "type": "Recreate"
         },
         "triggers": [
           {
@@ -157,7 +160,7 @@
             "imageChangeParams": {
               "automatic": true,
               "containerNames": [
-                "django-example"
+                "django-psql-example"
               ],
               "from": {
                 "kind": "ImageStreamTag",
@@ -183,7 +186,7 @@
           "spec": {
             "containers": [
               {
-                "name": "django-example",
+                "name": "django-psql-example",
                 "image": " ",
                 "ports": [
                   {
@@ -194,7 +197,7 @@
                   "timeoutSeconds": 3,
                   "initialDelaySeconds": 3,
                   "httpGet": {
-                    "path": "/",
+                    "path": "/health",
                     "port": 8080
                   }
                 },
@@ -202,11 +205,41 @@
                   "timeoutSeconds": 3,
                   "initialDelaySeconds": 30,
                   "httpGet": {
-                    "path": "/",
+                    "path": "/health",
                     "port": 8080
                   }
                 },
                 "env": [
+                  {
+                    "name": "DATABASE_SERVICE_NAME",
+                    "value": "${DATABASE_SERVICE_NAME}"
+                  },
+                  {
+                    "name": "DATABASE_ENGINE",
+                    "value": "${DATABASE_ENGINE}"
+                  },
+                  {
+                    "name": "DATABASE_NAME",
+                    "value": "${DATABASE_NAME}"
+                  },
+                  {
+                    "name": "DATABASE_USER",
+                    "valueFrom": {
+                      "secretKeyRef" : {
+                        "name" : "${NAME}",
+                        "key" : "database-user"
+                      }
+                    }
+                  },
+                  {
+                    "name": "DATABASE_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef" : {
+                        "name" : "${NAME}",
+                        "key" : "database-password"
+                      }
+                    }
+                  },
                   {
                     "name": "APP_CONFIG",
                     "value": "${APP_CONFIG}"
@@ -231,6 +264,143 @@
           }
         }
       }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "${DATABASE_SERVICE_NAME}",
+        "annotations": {
+          "description": "Exposes the database server"
+        }
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "postgresql",
+            "port": 5432,
+            "targetPort": 5432
+          }
+        ],
+        "selector": {
+          "name": "${DATABASE_SERVICE_NAME}"
+        }
+      }
+    },
+    {
+      "kind": "DeploymentConfig",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "${DATABASE_SERVICE_NAME}",
+        "annotations": {
+          "description": "Defines how to deploy the database",
+          "template.alpha.openshift.io/wait-for-ready": "true"
+        }
+      },
+      "spec": {
+        "strategy": {
+          "type": "Recreate"
+        },
+        "triggers": [
+          {
+            "type": "ImageChange",
+            "imageChangeParams": {
+              "automatic": true,
+              "containerNames": [
+                "postgresql"
+              ],
+              "from": {
+                "kind": "ImageStreamTag",
+                "namespace": "${NAMESPACE}",
+                "name": "postgresql:${POSTGRESQL_VERSION}"
+              }
+            }
+          },
+          {
+            "type": "ConfigChange"
+          }
+        ],
+        "replicas": 1,
+        "selector": {
+          "name": "${DATABASE_SERVICE_NAME}"
+        },
+        "template": {
+          "metadata": {
+            "name": "${DATABASE_SERVICE_NAME}",
+            "labels": {
+              "name": "${DATABASE_SERVICE_NAME}"
+            }
+          },
+          "spec": {
+            "volumes": [
+              {
+                "name": "data",
+                "emptyDir": {}
+              }
+            ],
+            "containers": [
+              {
+                "name": "postgresql",
+                "image": " ",
+                "ports": [
+                  {
+                    "containerPort": 5432
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "POSTGRESQL_USER",
+                    "valueFrom": {
+                      "secretKeyRef" : {
+                        "name" : "${NAME}",
+                        "key" : "database-user"
+                      }
+                    }
+                  },
+                  {
+                    "name": "POSTGRESQL_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef" : {
+                        "name" : "${NAME}",
+                        "key" : "database-password"
+                      }
+                    }
+                  },
+                  {
+                    "name": "POSTGRESQL_DATABASE",
+                    "value": "${DATABASE_NAME}"
+                  }
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "data",
+                    "mountPath": "/var/lib/pgsql/data"
+                  }
+                ],
+                "readinessProbe": {
+                  "timeoutSeconds": 1,
+                  "initialDelaySeconds": 5,
+                  "exec": {
+                    "command": [ "/usr/libexec/check-container" ]
+                  }
+                },
+                "livenessProbe": {
+                  "timeoutSeconds": 10,
+                  "initialDelaySeconds": 120,
+                  "exec": {
+                    "command": [ "/usr/libexec/check-container", "--live" ]
+                  }
+                },
+                "resources": {
+                  "limits": {
+                    "memory": "${MEMORY_POSTGRESQL_LIMIT}"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
     }
   ],
   "parameters": [
@@ -239,7 +409,7 @@
       "displayName": "Name",
       "description": "The name assigned to all of the frontend objects defined in this template.",
       "required": true,
-      "value": "django-example"
+      "value": "django-psql-example"
     },
     {
       "name": "NAMESPACE",
@@ -256,10 +426,24 @@
       "required": true
     },
     {
+      "name": "POSTGRESQL_VERSION",
+      "displayName": "Version of PostgreSQL Image",
+      "description": "Version of PostgreSQL image to be used (10 or latest).",
+      "value": "10",
+      "required": true
+    },
+    {
       "name": "MEMORY_LIMIT",
       "displayName": "Memory Limit",
       "required": true,
-      "description": "Maximum amount of memory the container can use.",
+      "description": "Maximum amount of memory the Django container can use.",
+      "value": "512Mi"
+    },
+    {
+      "name": "MEMORY_POSTGRESQL_LIMIT",
+      "displayName": "Memory Limit (PostgreSQL)",
+      "required": true,
+      "description": "Maximum amount of memory the PostgreSQL container can use.",
       "value": "512Mi"
     },
     {
@@ -291,6 +475,37 @@
       "description": "Github trigger secret.  A difficult to guess string encoded as part of the webhook URL.  Not encrypted.",
       "generate": "expression",
       "from": "[a-zA-Z0-9]{40}"
+    },
+    {
+      "name": "DATABASE_SERVICE_NAME",
+      "displayName": "Database Service Name",
+      "required": true,
+      "value": "postgresql"
+    },
+    {
+      "name": "DATABASE_ENGINE",
+      "displayName": "Database Engine",
+      "required": true,
+      "description": "Database engine: postgresql, mysql or sqlite (default).",
+      "value": "postgresql"
+    },
+    {
+      "name": "DATABASE_NAME",
+      "displayName": "Database Name",
+      "required": true,
+      "value": "default"
+    },
+    {
+      "name": "DATABASE_USER",
+      "displayName": "Database Username",
+      "required": true,
+      "value": "django"
+    },
+    {
+      "name": "DATABASE_PASSWORD",
+      "displayName": "Database User Password",
+      "generate": "expression",
+      "from": "[a-zA-Z0-9]{16}"
     },
     {
       "name": "APP_CONFIG",
