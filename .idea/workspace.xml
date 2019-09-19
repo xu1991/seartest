@@ -2,6 +2,1255 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfe243f2-6342-43dd-ad91-cc2956485646" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/seartest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/answerers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/answerers/random/answerer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/answerers/statistics/answerer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/autocomplete.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/reload.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/currencies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/engines_languages.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/useragents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/1337x.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/acgsou.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/apkmirror.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/archlinux.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/arxiv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/bing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/bing_images.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/bing_news.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/bing_videos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/btdigg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/currency_convert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/dailymotion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/deezer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/deviantart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/dictzone.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/digbt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/digg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/doku.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/duckduckgo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/duckduckgo_definitions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/duckduckgo_images.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/duden.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/dummy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/faroo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/fdroid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/filecrop.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/flickr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/flickr_noapi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/framalibre.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/frinkiac.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/genius.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/gentoo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/gigablast.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/github.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/google.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/google_images.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/google_news.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/google_videos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/ina.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/invidious.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/json_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/kickass.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/mediawiki.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/microsoft_academic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/mixcloud.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/nyaa.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/openstreetmap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/pdbe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/photon.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/piratebay.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/pubmed.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/qwant.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/reddit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/scanr_structures.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/searchcode_code.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/searchcode_doc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/searx_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/soundcloud.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/spotify.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/stackoverflow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/startpage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/tokyotoshokan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/torrentz.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/translated.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/twitter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/unsplash.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/vimeo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/wikidata.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/wikipedia.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/wolframalpha_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/wolframalpha_noapi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/www1x.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/xpath.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/yacy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/yahoo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/yahoo_news.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/yandex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/youtube_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engines/youtube_noapi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openshift/scripts/run-in-container.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openshift/templates/django.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rewrite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/00README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Bing.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Dailymotion.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Deviantart.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/DuckDuckGo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Flickr.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Github-Pages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Github.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Google-mismatches.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Google.org.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/GoogleAPIs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/GoogleCanada.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/GoogleImages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/GoogleMainSearch.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/GoogleMaps.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/GoogleMelange.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/GoogleSearch.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/GoogleServices.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/GoogleShopping.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/GoogleSorry.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/GoogleTranslate.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/GoogleVideos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/GoogleWatchBlog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Google_App_Engine.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Googleplex.com.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/OpenStreetMap.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Rawgithub.com.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Soundcloud.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/ThePirateBay.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Torproject.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Twitter.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Vimeo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/WikiLeaks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Wikimedia.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/Yahoo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/https_rules/YouTube.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/infinite_scroll.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/oa_doi_rewrite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/open_results_on_new_tab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/search_on_category_select.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/self_info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/tracker_url_remover.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/vim_hotkeys.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poolrequests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preferences.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/query.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/answerers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/answerers/random/answerer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/answerers/statistics/answerer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/autocomplete.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/data/currencies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/data/engines_languages.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/data/useragents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/1337x.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/acgsou.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/apkmirror.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/archlinux.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/arxiv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/bing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/bing_images.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/bing_news.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/bing_videos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/btdigg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/currency_convert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/dailymotion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/deezer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/deviantart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/dictzone.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/digbt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/digg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/doku.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/duckduckgo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/duckduckgo_definitions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/duckduckgo_images.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/duden.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/dummy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/faroo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/fdroid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/filecrop.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/flickr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/flickr_noapi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/framalibre.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/frinkiac.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/genius.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/gentoo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/gigablast.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/github.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/google.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/google_images.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/google_news.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/google_videos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/ina.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/invidious.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/json_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/kickass.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/mediawiki.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/microsoft_academic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/mixcloud.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/nyaa.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/openstreetmap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/pdbe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/photon.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/piratebay.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/pubmed.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/qwant.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/reddit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/scanr_structures.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/searchcode_code.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/searchcode_doc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/searx_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/soundcloud.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/spotify.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/stackoverflow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/startpage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/tokyotoshokan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/torrentz.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/translated.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/twitter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/unsplash.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/vimeo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/wikidata.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/wikipedia.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/wolframalpha_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/wolframalpha_noapi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/www1x.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/xpath.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/yacy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/yahoo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/yahoo_news.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/yandex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/youtube_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/engines/youtube_noapi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/languages.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rewrite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/00README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Bing.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Dailymotion.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Deviantart.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/DuckDuckGo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Flickr.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Github-Pages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Github.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Google-mismatches.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Google.org.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/GoogleAPIs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/GoogleCanada.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/GoogleImages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/GoogleMainSearch.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/GoogleMaps.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/GoogleMelange.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/GoogleSearch.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/GoogleServices.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/GoogleShopping.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/GoogleSorry.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/GoogleTranslate.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/GoogleVideos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/GoogleWatchBlog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Google_App_Engine.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Googleplex.com.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/OpenStreetMap.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Rawgithub.com.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Soundcloud.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/ThePirateBay.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Torproject.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Twitter.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Vimeo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/WikiLeaks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Wikimedia.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/Yahoo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/https_rules/YouTube.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/infinite_scroll.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/oa_doi_rewrite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/open_results_on_new_tab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/search_on_category_select.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/self_info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/tracker_url_remover.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/plugins/vim_hotkeys.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/poolrequests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/preferences.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/query.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/results.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/settings.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/settings_robot.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/js/html5shiv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/js/jquery-1.11.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/js/mootools-autocompleter-1.1.2-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/js/mootools-core-1.4.5-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/js/require-2.1.15.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/js/respond.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/js/typeahead.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/.csscomb.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/.csslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/alerts.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/badges.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/bootstrap.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/breadcrumbs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/button-groups.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/carousel.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/close.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/code.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/component-animations.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/dropdowns.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/forms.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/glyphicons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/grid.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/input-groups.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/jumbotron.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/labels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/list-group.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/media.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/alerts.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/background-variant.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/border-radius.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/center-block.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/clearfix.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/forms.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/gradients.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/grid-framework.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/grid.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/hide-text.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/image.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/labels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/list-group.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/nav-divider.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/nav-vertical-align.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/opacity.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/pagination.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/panels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/progress-bar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/reset-filter.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/resize.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/responsive-visibility.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/size.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/tab-focus.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/table-row.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/text-emphasis.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/text-overflow.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/mixins/vendor-prefixes.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/modals.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/navbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/navs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/normalize.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/pager.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/pagination.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/panels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/popovers.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/print.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/progress-bars.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/responsive-embed.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/responsive-utilities.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/scaffolding.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/tables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/theme.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/thumbnails.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/tooltip.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/type.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/typeahead.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/utilities.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/less/bootstrap/wells.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/plugins/css/infinite_scroll.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/plugins/css/vim_hotkeys.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/plugins/js/infinite_scroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/plugins/js/open_results_on_new_tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/plugins/js/search_on_category_select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/plugins/js/vim_hotkeys.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/css/style-rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/bg-body-index.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/github_ribbon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_500px.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_bing.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_dailymotion.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_deezer.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_deviantart.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_digg.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_duckduckgo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_flickr.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_github.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_google play apps.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_google play movies.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_google play music.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_google.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_kickass.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_openstreetmap.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_searchcode code.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_searchcode doc.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_searchcode.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_soundcloud.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_stackoverflow.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_startpage.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_subtitleseeker.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_twitter.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_vimeo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_wikipedia.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_yahoo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/icons/icon_youtube.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/preference-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/search-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/searx-mobile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/searx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/img/searx_logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/js/searx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/less/style-rtl.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/courgette/less/style.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/css/style-rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/github_ribbon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_500px.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_bing.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_dailymotion.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_deezer.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_deviantart.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_digg.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_duckduckgo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_flickr.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_github.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_google play apps.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_google play movies.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_google play music.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_google.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_kickass.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_openstreetmap.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_searchcode code.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_searchcode doc.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_searchcode.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_soundcloud.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_stackoverflow.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_startpage.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_subtitleseeker.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_twitter.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_vimeo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_wikipedia.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_yahoo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/icons/icon_youtube.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/preference-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/search-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/searx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/img/searx_logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/js/searx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/less/autocompleter.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/less/code.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/less/definitions.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/less/search.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/less/style-rtl.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/legacy/less/style.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/README.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/css/leaflet.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/css/logicodev-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/css/logicodev-dark.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/css/logicodev.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/css/logicodev.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/css/pointhi.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/css/pointhi.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/gruntfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/1337x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/amazon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/dailymotion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/deviantart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/flickr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/github.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/invidious.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/kickass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/openstreetmap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/photon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/searchcode code.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/searchcode doc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/soundcloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/stackoverflow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/vimeo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/wikipedia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/icons/youtube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/logo_searx_a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/logo_searx_a_n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/map/layers-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/map/layers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/map/marker-icon-2x-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/map/marker-icon-2x-orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/map/marker-icon-2x-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/map/marker-icon-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/map/marker-icon-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/map/marker-icon-orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/map/marker-icon-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/map/marker-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/map/marker-shadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/img/searx_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/js/leaflet-0.7.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/js/searx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/js/searx.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/js/searx_src/00_requirejs_config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/js/searx_src/01_init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/js/searx_src/autocompleter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/js/searx_src/element_modifiers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/js/searx_src/leaflet_map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/logicodev-dark/oscar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/logicodev/advanced.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/logicodev/checkbox.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/logicodev/code.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/logicodev/cursor.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/logicodev/footer.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/logicodev/infobox.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/logicodev/navbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/logicodev/onoff.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/logicodev/oscar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/logicodev/preferences.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/logicodev/results.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/logicodev/search.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/logicodev/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/pointhi/advanced.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/pointhi/checkbox.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/pointhi/code.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/pointhi/cursor.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/pointhi/footer.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/pointhi/infobox.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/pointhi/navbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/pointhi/onoff.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/pointhi/oscar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/pointhi/preferences.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/pointhi/results.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/less/pointhi/search.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/oscar/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/pix-art/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/pix-art/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/pix-art/img/preference-icon-pixel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/pix-art/img/search-icon-pixel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/pix-art/img/searx-pixel-small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/pix-art/img/searx-pixel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/pix-art/js/searx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/pix-art/less/definitions.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/pix-art/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/pix-art/less/search.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/pix-art/less/style.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/.jshintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/css/searx-rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/css/searx-rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/css/searx.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/css/searx.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/fonts/ion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/fonts/ion.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/fonts/ion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/fonts/ion.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/fonts/ion.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/fonts/ion.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/fonts/ion.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/gruntfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/img/logo_searx_a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/img/searx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/img/searx_logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/js/searx.head.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/js/searx.head.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/js/searx.head.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/js/searx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/js/searx.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/js/searx.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/js/searx_head/00_init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/js/searx_src/00_searx_toolkit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/js/searx_src/autocomplete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/js/searx_src/searx_imageresult.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/js/searx_src/searx_keyboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/js/searx_src/searx_mapresult.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/js/searx_src/searx_results.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/js/searx_src/searx_search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/leaflet/images/layers-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/leaflet/images/layers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/leaflet/images/marker-icon-2x-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/leaflet/images/marker-icon-2x-orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/leaflet/images/marker-icon-2x-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/leaflet/images/marker-icon-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/leaflet/images/marker-icon-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/leaflet/images/marker-icon-orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/leaflet/images/marker-icon-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/leaflet/images/marker-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/leaflet/images/marker-shadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/leaflet/leaflet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/leaflet/leaflet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/less/autocomplete.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/less/code.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/less/definitions.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/less/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/less/ion.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/less/normalize.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/less/preferences.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/less/search.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/less/stats.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/less/style-rtl.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/less/style.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/less/toolkit.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/less/toolkit_loader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/magnet.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/static/themes/simple/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/__common__/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/__common__/opensearch.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/__common__/opensearch_response_rss.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/categories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/color.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/github_ribbon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/preferences.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/result_templates/code.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/result_templates/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/result_templates/images.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/result_templates/map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/result_templates/torrent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/result_templates/videos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/courgette/stats.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/categories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/github_ribbon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/infobox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/preferences.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/result_templates/code.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/result_templates/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/result_templates/images.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/result_templates/map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/result_templates/torrent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/result_templates/videos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/legacy/stats.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/advanced.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/categories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/infobox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/languages.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/macros.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/messages/first_time.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/messages/no_cookies.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/messages/no_data_available.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/messages/no_results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/messages/save_settings_successfull.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/messages/unknow_error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/preferences.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/result_templates/code.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/result_templates/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/result_templates/images.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/result_templates/map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/result_templates/torrent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/result_templates/videos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/search_full.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/stats.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/oscar/time-range.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/pix-art/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/pix-art/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/pix-art/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/pix-art/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/pix-art/preferences.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/pix-art/result_templates/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/pix-art/result_templates/images.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/pix-art/results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/pix-art/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/pix-art/stats.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/categories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/infobox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/languages.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/macros.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/messages/no_results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/preferences.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/result_templates/code.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/result_templates/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/result_templates/images.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/result_templates/map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/result_templates/torrent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/result_templates/videos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/simple.spec.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/stats.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/templates/simple/time-range.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/testing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/ar/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/bg/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/ca/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/cs/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/cy/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/da/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/de/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/el_GR/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/en/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/eo/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/es/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/eu/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/fa_IR/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/fi/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/fil/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/fr/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/gl/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/he/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/hr/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/hu/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/ia/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/it/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/ja/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/nl/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/nl_BE/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/pl/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/pt/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/pt_BR/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/ro/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/ru/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/sk/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/sl/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/sr/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/sv/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/te/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/tr/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/uk/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/vi/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/zh_CN/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/zh_Hant_TW/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/translations/zh_TW/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/url_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searx/webapp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings_robot.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/html5shiv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-1.11.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/mootools-autocompleter-1.1.2-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/mootools-core-1.4.5-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/require-2.1.15.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/respond.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/typeahead.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/.csscomb.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/.csslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/alerts.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/badges.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/bootstrap.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/breadcrumbs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/button-groups.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/carousel.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/close.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/code.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/component-animations.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/dropdowns.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/forms.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/glyphicons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/grid.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/input-groups.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/jumbotron.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/labels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/list-group.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/media.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/alerts.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/background-variant.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/border-radius.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/buttons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/center-block.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/clearfix.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/forms.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/gradients.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/grid-framework.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/grid.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/hide-text.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/image.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/labels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/list-group.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/nav-divider.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/nav-vertical-align.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/opacity.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/pagination.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/panels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/progress-bar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/reset-filter.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/resize.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/responsive-visibility.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/size.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/tab-focus.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/table-row.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/text-emphasis.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/text-overflow.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/mixins/vendor-prefixes.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/modals.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/navbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/navs.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/normalize.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/pager.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/pagination.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/panels.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/popovers.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/print.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/progress-bars.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/responsive-embed.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/responsive-utilities.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/scaffolding.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/tables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/theme.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/thumbnails.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/tooltip.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/type.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/typeahead.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/utilities.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/less/bootstrap/wells.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/css/infinite_scroll.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/css/vim_hotkeys.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/js/infinite_scroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/js/open_results_on_new_tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/js/search_on_category_select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/js/vim_hotkeys.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/css/style-rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/bg-body-index.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/github_ribbon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_500px.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_bing.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_dailymotion.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_deezer.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_deviantart.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_digg.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_duckduckgo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_flickr.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_github.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_google play apps.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_google play movies.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_google play music.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_google.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_kickass.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_openstreetmap.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_searchcode code.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_searchcode doc.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_searchcode.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_soundcloud.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_stackoverflow.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_startpage.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_subtitleseeker.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_twitter.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_vimeo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_wikipedia.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_yahoo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/icons/icon_youtube.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/preference-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/search-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/searx-mobile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/searx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/img/searx_logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/js/searx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/less/style-rtl.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/courgette/less/style.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/css/style-rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/github_ribbon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_500px.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_bing.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_dailymotion.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_deezer.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_deviantart.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_digg.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_duckduckgo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_flickr.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_github.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_google play apps.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_google play movies.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_google play music.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_google.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_kickass.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_openstreetmap.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_searchcode code.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_searchcode doc.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_searchcode.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_soundcloud.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_stackoverflow.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_startpage.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_subtitleseeker.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_twitter.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_vimeo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_wikipedia.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_yahoo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/icons/icon_youtube.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/preference-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/search-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/searx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/img/searx_logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/js/searx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/less/autocompleter.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/less/code.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/less/definitions.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/less/search.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/less/style-rtl.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/legacy/less/style.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/README.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/css/leaflet.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/css/logicodev-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/css/logicodev-dark.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/css/logicodev.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/css/logicodev.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/css/pointhi.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/css/pointhi.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/gruntfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/1337x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/amazon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/dailymotion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/deviantart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/flickr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/github.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/invidious.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/kickass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/openstreetmap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/photon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/searchcode code.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/searchcode doc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/soundcloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/stackoverflow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/vimeo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/wikipedia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/icons/youtube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/logo_searx_a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/logo_searx_a_n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/map/layers-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/map/layers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/map/marker-icon-2x-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/map/marker-icon-2x-orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/map/marker-icon-2x-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/map/marker-icon-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/map/marker-icon-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/map/marker-icon-orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/map/marker-icon-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/map/marker-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/map/marker-shadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/img/searx_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/js/leaflet-0.7.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/js/searx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/js/searx.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/js/searx_src/00_requirejs_config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/js/searx_src/01_init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/js/searx_src/autocompleter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/js/searx_src/element_modifiers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/js/searx_src/leaflet_map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/logicodev-dark/oscar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/logicodev/advanced.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/logicodev/checkbox.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/logicodev/code.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/logicodev/cursor.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/logicodev/footer.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/logicodev/infobox.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/logicodev/navbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/logicodev/onoff.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/logicodev/oscar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/logicodev/preferences.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/logicodev/results.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/logicodev/search.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/logicodev/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/pointhi/advanced.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/pointhi/checkbox.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/pointhi/code.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/pointhi/cursor.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/pointhi/footer.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/pointhi/infobox.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/pointhi/navbar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/pointhi/onoff.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/pointhi/oscar.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/pointhi/preferences.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/pointhi/results.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/less/pointhi/search.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/oscar/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/pix-art/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/pix-art/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/pix-art/img/preference-icon-pixel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/pix-art/img/search-icon-pixel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/pix-art/img/searx-pixel-small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/pix-art/img/searx-pixel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/pix-art/js/searx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/pix-art/less/definitions.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/pix-art/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/pix-art/less/search.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/pix-art/less/style.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/.jshintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/css/searx-rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/css/searx-rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/css/searx.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/css/searx.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/fonts/ion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/fonts/ion.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/fonts/ion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/fonts/ion.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/fonts/ion.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/fonts/ion.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/fonts/ion.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/gruntfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/img/logo_searx_a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/img/searx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/img/searx_logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/js/searx.head.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/js/searx.head.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/js/searx.head.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/js/searx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/js/searx.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/js/searx.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/js/searx_head/00_init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/js/searx_src/00_searx_toolkit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/js/searx_src/autocomplete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/js/searx_src/searx_imageresult.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/js/searx_src/searx_keyboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/js/searx_src/searx_mapresult.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/js/searx_src/searx_results.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/js/searx_src/searx_search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/leaflet/images/layers-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/leaflet/images/layers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/leaflet/images/marker-icon-2x-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/leaflet/images/marker-icon-2x-orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/leaflet/images/marker-icon-2x-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/leaflet/images/marker-icon-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/leaflet/images/marker-icon-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/leaflet/images/marker-icon-orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/leaflet/images/marker-icon-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/leaflet/images/marker-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/leaflet/images/marker-shadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/leaflet/leaflet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/leaflet/leaflet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/less/autocomplete.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/less/code.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/less/definitions.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/less/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/less/ion.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/less/normalize.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/less/preferences.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/less/search.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/less/stats.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/less/style-rtl.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/less/style.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/less/toolkit.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/less/toolkit_loader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/magnet.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/themes/simple/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/__common__/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/__common__/opensearch.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/__common__/opensearch_response_rss.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/categories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/color.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/github_ribbon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/preferences.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/result_templates/code.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/result_templates/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/result_templates/images.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/result_templates/map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/result_templates/torrent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/result_templates/videos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/courgette/stats.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/categories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/github_ribbon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/infobox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/preferences.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/result_templates/code.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/result_templates/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/result_templates/images.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/result_templates/map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/result_templates/torrent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/result_templates/videos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/legacy/stats.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/advanced.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/categories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/infobox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/languages.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/macros.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/messages/first_time.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/messages/no_cookies.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/messages/no_data_available.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/messages/no_results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/messages/save_settings_successfull.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/messages/unknow_error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/preferences.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/result_templates/code.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/result_templates/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/result_templates/images.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/result_templates/map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/result_templates/torrent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/result_templates/videos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/search_full.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/stats.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/oscar/time-range.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pix-art/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pix-art/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pix-art/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pix-art/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pix-art/preferences.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pix-art/result_templates/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pix-art/result_templates/images.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pix-art/results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pix-art/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pix-art/stats.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/categories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/infobox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/languages.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/macros.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/messages/no_results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/preferences.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/result_templates/code.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/result_templates/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/result_templates/images.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/result_templates/map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/result_templates/torrent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/result_templates/videos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/simple.spec.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/stats.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/simple/time-range.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/ar/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/bg/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/ca/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/cs/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/cy/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/da/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/de/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/el_GR/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/en/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/eo/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/es/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/eu/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/fa_IR/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/fi/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/fil/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/fr/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/gl/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/he/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/hr/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/hu/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/ia/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/it/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/ja/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/nl/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/nl_BE/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/pl/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/pt/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/pt_BR/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/ro/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/ru/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/sk/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/sl/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/sr/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/sv/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/te/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/tr/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/uk/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/vi/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/zh_CN/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/zh_Hant_TW/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/zh_TW/LC_MESSAGES/messages.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/url_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/welcome/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/welcome/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/welcome/database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/welcome/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/welcome/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/welcome/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/welcome/templates/welcome/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/welcome/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/welcome/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,7 +1265,54 @@
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="125">
-              <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searx/autocomplete.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searx/exceptions.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searx/languages.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-974" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searx/search.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-750" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searx/testing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1725" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searx/engines/youtube_api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-975" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searx/engines/google.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="154" selection-start-line="154" selection-end-line="154" />
             </state>
           </provider>
         </entry>
@@ -50,11 +1346,6 @@
             <path>
               <item name="seartest" type="b2602c69:ProjectViewProjectNode" />
               <item name="seartest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="seartest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="seartest" type="462c0819:PsiDirectoryNode" />
-              <item name="searx" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -117,12 +1408,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568854246482</updated>
-      <workItem from="1568854247894" duration="32000" />
+      <workItem from="1568854247894" duration="430000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32000" />
+    <option name="totallyTimeSpent" value="430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -156,10 +1447,43 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/searx/autocomplete.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/exceptions.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/languages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-974" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-750" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/testing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1725" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/engines/youtube_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-975" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/engines/google.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
-          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
