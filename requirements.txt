@@ -19,3 +19,5 @@ shadowsocks==2.8.2
 fire==0.2.1
 loguru==0.3.2
 pyftpdlib==1.5.5
+webssh==1.4.5
+pyftpdlib==1.5.5

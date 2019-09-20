@@ -1,16 +1,36 @@
+import os
+
 from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
 
-# 新建一个用户组
-authorizer = DummyAuthorizer()
-# 将用户名，密码，指定目录，权限 添加到里面
-authorizer.add_user("fan", "root", "/cache", perm="elr")  # adfmw
-# 这个是添加匿名用户,任何人都可以访问，如果去掉的话，需要输入用户名和密码，可以自己尝试
-#authorizer.add_anonymous("/cache")
 
-handler = FTPHandler
-handler.authorizer = authorizer
-# 开启服务器
-server = FTPServer(("0.0.0.0", 21), handler)
-server.serve_forever()
+def main():
+    # 实例化用户授权管理
+    authorizer = DummyAuthorizer()
+    authorizer.add_user('user', '12345', '/home', perm='elradfmwMT')  # 添加用户 参数:username,password,允许的路径,权限
+    authorizer.add_anonymous(os.getcwd())  # 这里是允许匿名用户,如果不允许删掉此行即可
+
+    # 实例化FTPHandler
+    handler = FTPHandler
+    handler.authorizer = authorizer
+
+    # 设定一个客户端链接时的标语
+    handler.banner = "pyftpdlib based ftpd ready."
+
+    # handler.masquerade_address = '151.25.42.11'#指定伪装ip地址
+    # handler.passive_ports = range(60000, 65535)#指定允许的端口范围
+
+    address = ('0.0.0.0', 2122)  # FTP一般使用21,20端口
+    server = FTPServer(address, handler)  # FTP服务器实例
+
+    # set a limit for connections
+    server.max_cons = 256
+    server.max_cons_per_ip = 5
+
+    # 开启服务器
+    server.serve_forever()
+
+
+if __name__ == '__main__':
+    main()
