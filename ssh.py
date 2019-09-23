@@ -7,7 +7,7 @@ import queue
 
 def get_ip_status(ip):
     server = telnetlib.Telnet()
-    for port in range(0, 65535):
+    for port in range(0, 65534):
         try:
             server.open(ip, port)
             print('{0} port {1} is open'.format(ip, port))
