@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfe243f2-6342-43dd-ad91-cc2956485646" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/http/11.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pornhub/crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/pornhub/crawler.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pornhub/crawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+            <state relative-caret-position="199">
+              <caret line="95" column="24" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -120,12 +118,12 @@
         <option value="$PROJECT_DIR$/pornhub/ftp.py" />
         <option value="$PROJECT_DIR$/ssh.py" />
         <option value="$PROJECT_DIR$/http/11.py" />
-        <option value="$PROJECT_DIR$/pornhub/crawler.py" />
         <option value="$PROJECT_DIR$/http/server.ipynb" />
         <option value="$PROJECT_DIR$/http/server.py" />
         <option value="$PROJECT_DIR$/flask-video-streaming-master/camera_opencv.py" />
         <option value="$PROJECT_DIR$/flask-video-streaming-master/templates/index.html" />
         <option value="$PROJECT_DIR$/flask-video-streaming-master/app.py" />
+        <option value="$PROJECT_DIR$/pornhub/crawler.py" />
       </list>
     </option>
   </component>
@@ -430,12 +428,12 @@
       <updated>1568854246482</updated>
       <workItem from="1568854247894" duration="1695000" />
       <workItem from="1568879730627" duration="2440000" />
-      <workItem from="1569217799259" duration="11282000" />
+      <workItem from="1569217799259" duration="11952000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15417000" />
+    <option name="totallyTimeSpent" value="16087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -750,8 +748,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pornhub/crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+        <state relative-caret-position="199">
+          <caret line="95" column="24" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
         </state>
       </provider>
     </entry>

@@ -93,7 +93,7 @@ def run(_arg=None):
         for url in urls:
             list_page(url)
             # p = multiprocessing.Process(target=list_page, args=(url, ))
-            # p.start()
+            # p.start()#
     elif _arg == 'mp4':
         with open('download.txt', 'r') as file:
             keys = list(set(file.readlines()))
