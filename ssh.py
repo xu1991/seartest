@@ -27,7 +27,8 @@ def check_open(q):
 
 
 if __name__ == '__main__':
-    host = ['10.0.0.10', '10.0.0.11', '10.0.0.12']  # 这里模拟多IP地址的情况，也可以从文件中读取IP——list
+ #   host = ['10.0.0.10', '10.0.0.11', '10.0.0.12']  # 这里模拟多IP地址的情况，也可以从文件中读取IP——list
+    host = ['127.0.0.1']
     q = queue.Queue()
     for ip in host:
         q.put(ip)
