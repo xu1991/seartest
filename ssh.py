@@ -11,6 +11,8 @@ def get_ip_status(ip):
         try:
             server.open(ip, port)
             print('{0} port {1} is open'.format(ip, port))
+            with open('data.txt', 'w') as f:  # 设置文件对象
+                f.write('{0} port {1} is open')  # 将字符串写入文件中
         except Exception as err:
             print('laji')
   #          print('{0} port {1} is not open'.format(ip, port))
