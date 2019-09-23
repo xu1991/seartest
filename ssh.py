@@ -12,7 +12,8 @@ def get_ip_status(ip):
             server.open(ip, port)
             print('{0} port {1} is open'.format(ip, port))
         except Exception as err:
-            print('{0} port {1} is not open'.format(ip, port))
+            print('laji')
+  #          print('{0} port {1} is not open'.format(ip, port))
         finally:
             server.close()
 
