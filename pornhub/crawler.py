@@ -69,7 +69,7 @@ def detail_page(url):
 
 
 def download(url, name, filetype):
-    filepath = '%s/%s.%s' % (filetype, name, filetype)
+    filepath = '/opt/app-root/src/se/%s/%s.%s' % (filetype, name, filetype)
     if os.path.exists(filepath):
         logger.info('this file had been downloaded :: %s' % filepath)
         return

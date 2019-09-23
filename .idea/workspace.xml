@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bfe243f2-6342-43dd-ad91-cc2956485646" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ssh.py" beforeDir="false" afterPath="$PROJECT_DIR$/ssh.py" afterDir="false" />
-    </list>
+    <list default="true" id="bfe243f2-6342-43dd-ad91-cc2956485646" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,25 +9,57 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/seartest$webapp.coverage" NAME="webapp Coverage Results" MODIFIED="1569221698761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/searx" />
     <SUITE FILE_PATH="coverage/seartest$ssh.coverage" NAME="ssh Coverage Results" MODIFIED="1569219510167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/seartest$ftp.coverage" NAME="ftp Coverage Results" MODIFIED="1568961527992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pornhub" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
+        <entry file="file://$PROJECT_DIR$/searx/data/currencies.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+            <state relative-caret-position="-1050" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searx/answerers/random/answerer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1366">
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pornhub/ftp.py">
+        <entry file="file://$PROJECT_DIR$/searx/static/js/require-2.1.15.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searx/webapp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="631" selection-start-line="631" selection-end-line="631" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searx/results.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6825">
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -38,39 +68,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ssh.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
-              <folding>
-                <element signature="e#23#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/searx/autocomplete.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/searx/exceptions.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/searx/languages.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/searx/search.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/searx/testing.py">
+        <entry file="file://$PROJECT_DIR$/pornhub/crawler.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -80,10 +78,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/searx/engines/google.py">
+        <entry file="file://$PROJECT_DIR$/searx/static/js/html5shiv.min.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searx/static/js/typeahead.bundle.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3700">
-              <caret line="154" selection-start-line="154" selection-end-line="154" />
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searx/static/js/respond.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,6 +113,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>video</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -109,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="8" />
     <option name="width" value="1452" />
@@ -131,6 +152,61 @@
               <item name="seartest" type="b2602c69:ProjectViewProjectNode" />
               <item name="seartest" type="462c0819:PsiDirectoryNode" />
               <item name="pornhub" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seartest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seartest" type="462c0819:PsiDirectoryNode" />
+              <item name="searx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seartest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seartest" type="462c0819:PsiDirectoryNode" />
+              <item name="searx" type="462c0819:PsiDirectoryNode" />
+              <item name="answerers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seartest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seartest" type="462c0819:PsiDirectoryNode" />
+              <item name="searx" type="462c0819:PsiDirectoryNode" />
+              <item name="answerers" type="462c0819:PsiDirectoryNode" />
+              <item name="random" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seartest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seartest" type="462c0819:PsiDirectoryNode" />
+              <item name="searx" type="462c0819:PsiDirectoryNode" />
+              <item name="answerers" type="462c0819:PsiDirectoryNode" />
+              <item name="statistics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seartest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seartest" type="462c0819:PsiDirectoryNode" />
+              <item name="searx" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seartest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seartest" type="462c0819:PsiDirectoryNode" />
+              <item name="searx" type="462c0819:PsiDirectoryNode" />
+              <item name="engines" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seartest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seartest" type="462c0819:PsiDirectoryNode" />
+              <item name="searx" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seartest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seartest" type="462c0819:PsiDirectoryNode" />
+              <item name="searx" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seartest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seartest" type="462c0819:PsiDirectoryNode" />
+              <item name="searx" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -158,7 +234,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ssh">
+  <component name="RunManager" selected="Python.webapp">
     <configuration name="ftp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="seartest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -203,6 +279,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="webapp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="seartest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/searx" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/searx/webapp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="seartest" type="Python.DjangoServer" factoryName="Django server">
       <module name="seartest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -228,6 +326,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.webapp" />
         <item itemvalue="Python.ssh" />
         <item itemvalue="Python.ftp" />
       </list>
@@ -245,24 +344,24 @@
       <updated>1568854246482</updated>
       <workItem from="1568854247894" duration="1695000" />
       <workItem from="1568879730627" duration="2440000" />
-      <workItem from="1569217799259" duration="2155000" />
+      <workItem from="1569217799259" duration="4184000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6290000" />
+    <option name="totallyTimeSpent" value="8319000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="8" width="1452" height="871" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3441092" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3283582" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25965664" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -283,6 +382,22 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/searx/engines/youtube_api.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/searx/engines/youtube_api.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/settings.yml" />
     <entry file="file://$PROJECT_DIR$/requirements.txt">
@@ -293,21 +408,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/searx/autocomplete.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/searx/exceptions.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/searx/languages.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/searx/search.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/searx/testing.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/searx/engines/youtube_api.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/searx/engines/google.py">
@@ -336,6 +436,130 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-675" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/languages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/settings.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1325">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/settings_robot.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-463">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/testing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1500" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/preferences.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8200">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/poolrequests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3516">
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/exceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-341" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/data/useragents.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/data/engines_languages.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/data/currencies.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1050" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/answerers/random/answerer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1366">
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/static/js/html5shiv.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/static/js/typeahead.bundle.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/static/js/respond.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/static/js/require-2.1.15.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/engines/youtube_api.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/webapp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="631" selection-start-line="631" selection-end-line="631" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searx/results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6825">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pornhub/crawler.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
