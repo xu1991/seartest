@@ -16,6 +16,8 @@ import time
 browser = webdriver.PhantomJS(r'/opt/app-root/src/phantomjs-2.1.1-linux-x86_64/bin/phantomjs')
 url = r'https://www.google.com/webhp?hl=zh-CN&sa=X&ved=0ahUKEwjm_7ORv-jkAhWHfXAKHeEjA1YQPAgH'
 browser.get(url)
+browser.set_window_size(1200, 800)
 time.sleep(3)
+browser.maximize_window()
 browser.save_screenshot('1.png')
 browser.close()
