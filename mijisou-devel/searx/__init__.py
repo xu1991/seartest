@@ -45,7 +45,7 @@ if 'SEARX_SETTINGS_PATH' in environ:
     settings_path = check_settings_yml(join(searx_dir, environ['SEARX_SETTINGS_PATH']))
 else:
     # if not, get it from searx code base or last solution from /etc/searx
-    settings_path = check_settings_yml(join(searx_dir, 'settings.yml')) or check_settings_yml('/etc/searx/settings.yml')
+    settings_path = check_settings_yml(join(searx_dir, 'settings_et_dev.yml')) or check_settings_yml('/etc/searx/settings.yml')
 
 if not settings_path:
     raise Exception('settings.yml not found')

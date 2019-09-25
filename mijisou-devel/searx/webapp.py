@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+if __name__ == '__main__':
+    from sys import path
+    from os.path import realpath, dirname
+    path.append(realpath(dirname(realpath(__file__)) + '/../'))
 
 from werkzeug.serving import WSGIRequestHandler
 from searx.utils import new_hmac
@@ -101,6 +105,7 @@ else:
 WSGIRequestHandler.protocol_version = "HTTP/{}".format(settings['server'].get('http_protocol_version', '1.0'))
 
 # about static
+
 static_path = get_resources_directory(searx_dir, 'static', settings['ui']['static_path'])
 logger.debug('static directory is %s', static_path)
 static_files = get_static_files(static_path)
@@ -620,6 +625,49 @@ def index():
                 else:
                     result['publishedDate'] = format_date(result['publishedDate'])
 
+    if output_format == 'json':
+        return Response(json.dumps({'query': search_query.query.decode('utf-8'),
+                                    'number_of_results': number_of_results,
+                                    'results': results,
+                                    'answers': list(result_container.answers),
+                                    'corrections': list(result_container.corrections),
+                                    'infoboxes': result_container.infoboxes,
+                                    'suggestions': list(result_container.suggestions),
+                                    'unresponsive_engines': list(result_container.unresponsive_engines)},
+                                   default=lambda item: list(item) if isinstance(item, set) else item),
+                        mimetype='application/json')
+    elif output_format == 'csv':
+        csv = UnicodeWriter(StringIO())
+        keys = ('title', 'url', 'content', 'host', 'engine', 'score')
+        csv.writerow(keys)
+        for row in results:
+            row['host'] = row['parsed_url'].netloc
+            csv.writerow([row.get(key, '') for key in keys])
+        csv.stream.seek(0)
+        response = Response(csv.stream.read(), mimetype='application/csv')
+        cont_disp = 'attachment;Filename=searx_-_{0}.csv'.format(search_query.query)
+        response.headers.add('Content-Disposition', cont_disp)
+        return response
+    elif output_format == 'rss':
+        response_rss = render(
+            'opensearch_response_rss.xml',
+            results=results,
+            q=request.form['q'],
+            number_of_results=number_of_results,
+            base_url=get_base_url(),
+            override_theme='__common__',
+        )
+        return Response(response_rss, mimetype='text/xml')
+
+    # HTML output format
+
+    # suggestions: use RawTextQuery to get the suggestion URLs with the same bang
+    suggestion_urls = map(lambda suggestion: {
+                          'url': raw_text_query.changeSearchQuery(suggestion).getFullQuery(),
+                          'title': suggestion
+                          },
+                          result_container.suggestions)
+    #
     return render(
         'results.html',
         results=results,
@@ -712,7 +760,7 @@ def autocompleter():
                     mimetype='application/json')
 
 
-# @app.route('/preferences', methods=['GET', 'POST'])
+@app.route('/preferences', methods=['GET', 'POST'])
 def preferences():
     """Render preferences page && save user preferences"""
 
@@ -824,7 +872,7 @@ def image_proxy():
     return Response(img, mimetype=resp.headers['content-type'], headers=headers)
 
 
-# @app.route('/stats', methods=['GET'])
+@app.route('/stats', methods=['GET'])
 def stats():
     """Render engine statistics page."""
     stats = get_engines_stats()
@@ -879,7 +927,7 @@ def favicon():
                                mimetype='image/vnd.microsoft.icon')
 
 
-# @app.route('/clear_cookies')
+@app.route('/clear_cookies')
 def clear_cookies():
     resp = make_response(redirect(urljoin(settings['server']['base_url'], url_for('index'))))
     for cookie_name in request.cookies:
@@ -887,7 +935,7 @@ def clear_cookies():
     return resp
 
 
-# @app.route('/config')
+@app.route('/config')
 def config():
     return jsonify(list({'categories': categories.keys(),
                          'engines': [{'name': engine_name,
@@ -973,7 +1021,7 @@ class ReverseProxyPathFix(object):
 
 
 application = app
-sentry = Sentry(app, dsn=settings['sentry']['dsn'])
+#sentry = Sentry(app, dsn=settings['sentry']['dsn'])
 # patch app to handle non root url-s behind proxy & wsgi
 app.wsgi_app = ReverseProxyPathFix(ProxyFix(application.wsgi_app))
 
