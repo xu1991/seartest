@@ -11,22 +11,24 @@ search:
 
 server:
     port : 8086
-    bind_address : "0.0.0.0" # address to listen on
+    bind_address : "127.0.0.1" # address to listen on
     secret_key : "123456" # change this!
     base_url : False # Set custom base_url. Possible values: False or "https://your.custom.host/location/"
     image_proxy : False # Proxying image results through searx
     http_protocol_version : "1.0"  # 1.0 and 1.1 are supported
+    debug : 1
 
 cache:
     cache_server : "127.0.0.1" # redis cache server ip address
     cache_port : 6379 # redis cache server port
+    cache_password : 351671699@qh # redis cache server port
     cache_time : 86400 # cache 1 day
     cache_type : "redis" # cache type
     cache_db : 0 # we use db 0 in dev env
 
 ui:
-    static_path : "" # Custom static path - leave it blank if you didn't change
-    templates_path : "" # Custom templates path - leave it blank if you didn't change
+    static_path : "D:/Documents/mijisou-devel/searx/static" # Custom static path - leave it blank if you didn't change
+    templates_path : "D:/Documents/mijisou-devel/searx/templates" # Custom templates path - leave it blank if you didn't change
     default_theme : oscar # ui theme
     default_locale : "" # Default interface locale - leave blank to detect from browser information or use codes from the 'locales' config section
     theme_args :
@@ -34,10 +36,10 @@ ui:
 
 # searx supports result proxification using an external service: https://github.com/asciimoo/morty
 # uncomment below section if you have running morty proxy
-#result_proxy:
-#    url : http://your_result_proxy  #morty proxy service
-#    key : Your_result_proxy_key
- #   server_name : http://your_search_service
+result_proxy:
+    url : https://morty.moewah.com  #morty proxy service
+    key : moewah
+    server_name : https://www.moewah.com
 
 outgoing: # communication with search engines
     request_timeout : 2.0 # seconds

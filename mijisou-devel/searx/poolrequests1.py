@@ -1,9 +1,14 @@
-import requests
-
 from itertools import cycle
 from threading import RLock, local
-from searx import settings
 from time import time
+import traceback
+
+import redis
+import requests
+import requests_cache
+from haipproxy.client.py_cli import ProxyFetcher
+
+from searx import settings, logger
 
 
 class HTTPAdapterWithConnParams(requests.adapters.HTTPAdapter):
@@ -57,10 +62,20 @@ else:
     https_adapters = cycle((HTTPAdapterWithConnParams(pool_connections=connect, pool_maxsize=maxsize), ))
 
 
-class SessionSinglePool(requests.Session):
+class SessionSinglePool(requests_cache.CachedSession):
 
-    def __init__(self):
-        super(SessionSinglePool, self).__init__()
+    def __init__(self, cache_name='cache', backend=None, expire_after=None, allowable_codes=(200, ),
+                 allowable_methods=('GET', ), old_data_on_error=False, **backend_options):
+        super(
+            SessionSinglePool,
+            self).__init__(
+            cache_name=cache_name,
+            backend=backend,
+            expire_after=expire_after,
+            allowable_codes=allowable_codes,
+            allowable_methods=allowable_methods,
+            old_data_on_error=old_data_on_error,
+            **backend_options)
 
         # reuse the same adapters
         with RLock():
@@ -87,15 +102,39 @@ def get_time_for_thread():
     return threadLocal.total_time
 
 
+def get_proxy():
+    try:
+        args = settings['outgoing']['haipproxy_redis']
+        fetcher = ProxyFetcher('zhihu', strategy='greedy', redis_args=args)
+        proxy = fetcher.get_proxy()
+        if proxy:
+            return {'http': proxy}
+        else:
+            logger.warning('No available proxy fetched from the proxy pool.')
+    except Exception:
+        logger.warning('Exception in fetching proxy.')
+        logger.warning(traceback.print_exc())
+
+
 def request(method, url, **kwargs):
     """same as requests/requests/api.py request(...)"""
     time_before_request = time()
 
     # session start
-    session = SessionSinglePool()
+    redis_con = redis.StrictRedis(
+        host=settings['cache']['cache_server'],
+        port=settings['cache']['cache_port'],
+        db=settings['cache']['cache_db'],
+        password= settings['cache']['cache_password'])
+    session = SessionSinglePool(backend=settings['cache']['cache_type'], allowable_methods=('GET', 'POST'),
+                                expire_after=settings['cache']['cache_time'],
+                                connection=redis_con, )
 
     # proxies
-    kwargs['proxies'] = settings['outgoing'].get('proxies') or None
+    # kwargs['proxies'] = get_proxy() or settings['outgoing'].get(
+    #    'proxies') or None
+    kwargs['proxies'] = settings['outgoing'].get(
+        'proxies') or None
 
     # timeout
     if 'timeout' in kwargs:

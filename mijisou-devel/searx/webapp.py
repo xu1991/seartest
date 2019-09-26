@@ -43,6 +43,7 @@ import os
 import json
 import hmac
 import hashlib
+from time import time
 '''
 searx is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
@@ -128,7 +129,7 @@ for indice, theme in enumerate(themes):
 app = Flask(
     __name__,
     static_folder=static_path,
-    template_folder=templates_path
+    template_folder=templates_path,
 )
 
 
@@ -477,6 +478,8 @@ def render(template_name, override_theme=None, **kwargs):
 
 @app.before_request
 def pre_request():
+    request.start_time = time()
+    request.timings = []
     request.errors = []
 
     preferences = Preferences(themes, list(categories.keys()), engines, plugins)
@@ -510,6 +513,21 @@ def pre_request():
         if ((plugin.default_on and plugin.id not in disabled_plugins)
                 or plugin.id in allowed_plugins):
             request.user_plugins.append(plugin)
+
+
+@app.after_request
+def post_request(response):
+    total_time = time() - request.start_time
+    timings_all = ['total;dur=' + str(round(total_time * 1000, 3))]
+    if len(request.timings) > 0:
+        timings = sorted(request.timings, key=lambda v: v['total'])
+        timings_total = ['total_' + str(i) + '_' + v['engine'] +
+                         ';dur=' + str(round(v['total'] * 1000, 3)) for i, v in enumerate(timings)]
+        timings_load = ['load_' + str(i) + '_' + v['engine'] +
+                        ';dur=' + str(round(v['load'] * 1000, 3)) for i, v in enumerate(timings)]
+        timings_all = timings_all + timings_total + timings_load
+    response.headers.add('Server-Timing', ', '.join(timings_all))
+    return response
 
 
 def index_error(output_format, error_message):
@@ -564,6 +582,7 @@ def index():
 
     # search
     search_query = None
+    raw_text_query = None
     result_container = None
     try:
         search_query = get_search_query_from_webapp(request.preferences, request.form)
@@ -975,11 +994,12 @@ def page_not_found(e):
 def run():
     logger.debug('starting webserver on %s:%s', settings['server']['port'], settings['server']['bind_address'])
     app.run(
-        debug=searx_debug,
+        debug=True,
+      #  debug=searx_debug,
         use_debugger=searx_debug,
         port=settings['server']['port'],
         host=settings['server']['bind_address'],
-        threaded=True
+        threaded=True,
     )
 
 
