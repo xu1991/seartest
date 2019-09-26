@@ -1,25 +1,34 @@
 general:
     debug : False # Debug mode, only for development
-    instance_name : "searx" # displayed name
+    instance_name : "秘迹搜索" # displayed name
 
 search:
     safe_search : 0 # Filter results. 0: None, 1: Moderate, 2: Strict
-    autocomplete : "" # Existing autocomplete backends: "dbpedia", "duckduckgo", "google", "startpage", "wikipedia" - leave blank to turn it off by default
-    language : "en-US"
+    autocomplete : "" # Existing autocomplete backends: "baidu", "dbpedia", "duckduckgo", "google", "startpage", "wikipedia" - leave blank to turn it off by default
+    language : "zh-CN"
     ban_time_on_fail : 5 # ban time in seconds after engine errors
     max_ban_time_on_fail : 120 # max ban time in seconds after engine errors
 
 server:
-    port : 8888
+    port : 8086
     bind_address : "127.0.0.1" # address to listen on
-    secret_key : "ultrasecretkey" # change this!
+    secret_key : "123456" # change this!
     base_url : False # Set custom base_url. Possible values: False or "https://your.custom.host/location/"
     image_proxy : False # Proxying image results through searx
     http_protocol_version : "1.0"  # 1.0 and 1.1 are supported
+    debug : 1
+
+cache:
+    cache_server : "127.0.0.1" # redis cache server ip address
+    cache_port : 6379 # redis cache server port
+    cache_password : 351671699@qh # redis cache server port
+    cache_time : 86400 # cache 1 day
+    cache_type : "redis" # cache type
+    cache_db : 0 # we use db 0 in dev env
 
 ui:
-    static_path : "" # Custom static path - leave it blank if you didn't change
-    templates_path : "" # Custom templates path - leave it blank if you didn't change
+    static_path : "D:/Documents/mijisou-devel/searx/static" # Custom static path - leave it blank if you didn't change
+    templates_path : "D:/Documents/mijisou-devel/searx/templates" # Custom templates path - leave it blank if you didn't change
     default_theme : oscar # ui theme
     default_locale : "" # Default interface locale - leave blank to detect from browser information or use codes from the 'locales' config section
     theme_args :
@@ -27,9 +36,10 @@ ui:
 
 # searx supports result proxification using an external service: https://github.com/asciimoo/morty
 # uncomment below section if you have running morty proxy
-#result_proxy:
-#    url : http://127.0.0.1:3000/
-#    key : your_morty_proxy_key
+result_proxy:
+    url : https://morty.moewah.com  #morty proxy service
+    key : moewah
+    server_name : https://www.moewah.com
 
 outgoing: # communication with search engines
     request_timeout : 2.0 # seconds
@@ -40,15 +50,27 @@ outgoing: # communication with search engines
 # see http://docs.python-requests.org/en/latest/user/advanced/#proxies
 # SOCKS proxies are also supported: see http://docs.python-requests.org/en/master/user/advanced/#socks
 #    proxies :
-#        http : http://127.0.0.1:8080
+#        http : http://192.168.199.5:24000
+#        http : http://192.168.199.5:3128
 #        https: http://127.0.0.1:8080
 # uncomment below section only if you have more than one network interface
 # which can be the source of outgoing search requests
 #    source_ips:
 #        - 1.1.1.1
 #        - 1.1.1.2
+    haipproxy_redis:
+      #host: 192.168.199.5
+      #port: 6379
+      #password: kckdkkdkdkddk
+      #db: 0
 
 engines:
+  - name: apk mirror
+    engine: apkmirror
+    timeout: 4.0
+    shortcut: apkm
+    disabled: True
+
   - name : arch linux wiki
     engine : archlinux
     shortcut : al
@@ -69,10 +91,6 @@ engines:
     shortcut : arx
     categories : science
     timeout : 4.0
-
-  - name : asksteem
-    engine : asksteem
-    shortcut : as
 
   - name : base
     engine : base
@@ -111,6 +129,10 @@ engines:
     disabled : True
     shortcut : bb
 
+  - name : btdigg
+    engine : btdigg
+    shortcut : bt
+
   - name : ccc-tv
     engine : xpath
     paging : False
@@ -125,7 +147,7 @@ engines:
   - name : crossref
     engine : json_engine
     paging : True
-    search_url : http://search.crossref.org/dois?q={query}&page={pageno}
+    search_url : https://search.crossref.org/dois?q={query}&page={pageno}
     url_query : doi
     title_query : title
     content_query : fullCitation
@@ -195,11 +217,11 @@ engines:
   - name : etymonline
     engine : xpath
     paging : True
-    search_url : http://etymonline.com/?search={query}&p={pageno}
-    url_xpath : //a[contains(@class, "word--")]/@href
-    title_xpath : //p[contains(@class, "word__name--")]/text()
-    content_xpath : //section[contains(@class, "word__defination")]/object
-    first_page_num : 0
+    search_url : https://etymonline.com/search?page={pageno}&q={query}
+    url_xpath : //a[contains(@class, "word__name--")]/@href
+    title_xpath : //a[contains(@class, "word__name--")]
+    content_xpath : //section[contains(@class, "word__defination")]
+    first_page_num : 1
     shortcut : et
     disabled : True
 
@@ -216,24 +238,6 @@ engines:
   - name : fdroid
     engine : fdroid
     shortcut : fd
-    disabled : True
-
-  - name : findx
-    engine : findx
-    shortcut : fx
-    categories : general
-    disabled : True
-
-  - name : findx images
-    engine : findx
-    shortcut : fxi
-    categories : images
-    disabled : True
-
-  - name : findx videos
-    engine : findx
-    shortcut : fxv
-    categories : videos
     disabled : True
 
   - name : flickr
@@ -318,38 +322,44 @@ engines:
     url_xpath : .//h3/a/@href
     title_xpath : .//h3/a
     content_xpath : .//div[@class="gs_rs"]
-    suggestion_xpath : //div[@id="gs_qsuggest"]/ul/li
+    suggestion_xpath : //div[@id="gs_res_ccl_top"]//a/b
     page_size : 10
     first_page_num : 0
     categories : science
     shortcut : gos
 
   - name : google play apps
-    engine        : xpath
-    search_url    : https://play.google.com/store/search?q={query}&c=apps
-    url_xpath     : //a[@class="title"]/@href
-    title_xpath   : //a[@class="title"]
-    content_xpath : //a[@class="subtitle"]
+    engine : xpath
+    search_url : https://play.google.com/store/search?q={query}&c=apps
+    results_xpath : '//div[@class="WHE7ib mpg5gc"]'
+    title_xpath : './/div[@class="RZEgze"]//div[@title and not(@title="")]/a'
+    url_xpath : './/div[@class="RZEgze"]//div[@title and not(@title="")]/a/@href'
+    content_xpath : './/div[@class="RZEgze"]//a[@class="mnKHRc"]'
+    thumbnail_xpath : './/div[@class="uzcko"]/div/span[1]//img/@data-src'
     categories : files
     shortcut : gpa
     disabled : True
 
   - name : google play movies
-    engine        : xpath
-    search_url    : https://play.google.com/store/search?q={query}&c=movies
-    url_xpath     : //a[@class="title"]/@href
-    title_xpath   : //a[@class="title"]/@title
-    content_xpath : //a[contains(@class, "subtitle")]
+    engine : xpath
+    search_url : https://play.google.com/store/search?q={query}&c=movies
+    results_xpath : '//div[@class="WHE7ib mpg5gc"]'
+    title_xpath : './/div[@class="RZEgze"]//div[@title and not(@title="")]/a'
+    url_xpath : './/div[@class="RZEgze"]//div[@title and not(@title="")]/a/@href'
+    content_xpath : './/div[@class="RZEgze"]//a[@class="mnKHRc"]'
+    thumbnail_xpath : './/div[@class="uzcko"]/div/span[1]//img/@data-src'
     categories : videos
     shortcut : gpm
     disabled : True
 
   - name : google play music
-    engine        : xpath
-    search_url    : https://play.google.com/store/search?q={query}&c=music
-    url_xpath     : //a[@class="title"]/@href
-    title_xpath   : //a[@class="title"]
-    content_xpath : //a[@class="subtitle"]
+    engine : xpath
+    search_url : https://play.google.com/store/search?q={query}&c=music
+    results_xpath : '//div[@class="WHE7ib mpg5gc"]'
+    title_xpath : './/div[@class="RZEgze"]//div[@title and not(@title="")]/a'
+    url_xpath : './/div[@class="RZEgze"]//div[@title and not(@title="")]/a/@href'
+    content_xpath : './/div[@class="RZEgze"]//a[@class="mnKHRc"]'
+    thumbnail_xpath : './/div[@class="uzcko"]/div/span[1]//img/@data-src'
     categories : music
     shortcut : gps
     disabled : True
@@ -396,6 +406,12 @@ engines:
     timeout : 6.0
     disabled : True
 
+  - name : invidious
+    engine : invidious
+    base_url : 'https://invidio.us/'
+    shortcut: iv
+    timeout : 5.0
+
   - name: kickass
     engine : kickass
     shortcut : kc
@@ -432,11 +448,25 @@ engines:
     engine : mixcloud
     shortcut : mc
 
+  - name : npm
+    engine : json_engine
+    paging : True
+    search_url : https://api.npms.io/v2/search?q={query}&size=25&from={pageno}
+    results_query : results
+    url_query : package/links/npm
+    title_query : package/name
+    content_query : package/description
+    page_size : 25
+    categories : it
+    disabled: True
+    timeout: 5.0
+    shortcut : npm
+
   - name : nyaa
     engine : nyaa
     shortcut : nt
     disabled : True
-  
+
   - name : acgsou
     engine : acgsou
     shortcut : acg
@@ -539,9 +569,9 @@ engines:
     engine : scanr_structures
     disabled : True
 
-  - name : soundcloud
-    engine : soundcloud
-    shortcut : sc
+#  - name : soundcloud
+#    engine : soundcloud
+#    shortcut : sc
 
   - name : stackoverflow
     engine : stackoverflow
@@ -584,30 +614,10 @@ engines:
     engine : spotify
     shortcut : stf
 
-  - name : subtitleseeker
-    engine : subtitleseeker
-    shortcut : ss
-# The language is an option. You can put any language written in english
-# Examples : English, French, German, Hungarian, Chinese...
-#    language : English
-
   - name : startpage
     engine : startpage
     shortcut : sp
     timeout : 6.0
-    disabled : True
-
-  - name : ixquick
-    engine : startpage
-    base_url : 'https://www.ixquick.eu/'
-    search_url : 'https://www.ixquick.eu/do/search'
-    shortcut : iq
-    timeout : 6.0
-    disabled : True
-
-  - name : swisscows
-    engine : swisscows
-    shortcut : sw
     disabled : True
 
   - name : tokyotoshokan
@@ -641,6 +651,11 @@ engines:
 #    title_xpath   : //*[@class="def-header"]
 #    content_xpath : //*[@class="meaning"]
 #    shortcut : ud
+
+  - name : unsplash
+    engine : unsplash
+    disabled: True
+    shortcut : us
 
   - name : yahoo
     engine : yahoo
@@ -683,12 +698,6 @@ engines:
     timeout: 6.0
     categories : science
 
-  - name : seedpeer
-    engine : seedpeer
-    shortcut: speu
-    categories: files, music, videos
-    disabled: True
-
   - name : dictzone
     engine : dictzone
     shortcut : dc
@@ -707,9 +716,9 @@ engines:
     shortcut: vo
     categories: social media
     search_url : https://searchvoat.co/?t={query}
-    url_xpath : //div[@class="entry"]/p/a[@class="title"]/@href
-    title_xpath : //div[@class="entry"]/p/a[@class="title"]
-    content_xpath : //div[@class="entry"]/p/span[@class="domain"]
+    url_xpath : //div[@class="entry"]/p/a[contains(@class, "title")]/@href
+    title_xpath : //div[@class="entry"]/p/a[contains(@class, "title")]
+    content_xpath : //div[@class="entry"]/p/span[@class="domain"]/a/text()
     timeout : 10.0
     disabled : True
 
@@ -718,10 +727,71 @@ engines:
     shortcut : 1337x
     disabled : True
 
-  - name : Duden
+  - name : duden
     engine : duden
     shortcut : du
     disabled : True
+
+  - name : seznam
+    shortcut: szn
+    engine: xpath
+    paging : True
+    search_url : https://search.seznam.cz/?q={query}&count=10&from={pageno}
+    results_xpath: //div[@class="Page-content"]//div[contains(@class, "Result ")]
+    url_xpath : ./h3/a/@href
+    title_xpath : ./h3
+    content_xpath : .//p[@class="Result-description"]
+    suggestion_xpath: //div[@class="Related-container"]//div[@class="RelatedItem"]/div/span/a
+    first_page_num : 0
+    page_size : 10
+    disabled : True
+
+  - name : mojeek
+    shortcut: mjk
+    engine: xpath
+    paging : True
+    search_url : https://www.mojeek.com/search?q={query}&s={pageno}
+    results_xpath: /html/body//div[@class="results"]/ul[@class="results-standard"]/li
+    url_xpath : ./h2/a/@href
+    title_xpath : ./h2
+    content_xpath : ./p[@class="s"]
+    suggestion_xpath : /html/body//div[@class="top-info"]/p[@class="top-info spell"]/a
+    first_page_num : 1
+    page_size : 10
+    disabled : True
+
+  - name : baidu
+    engine : baidu
+    shortcut : bd
+  
+  - name : baidu images
+    engine : baidu_images
+    shortcut : bdi
+
+  - name : baidu videos
+    engine : baidu_videos
+    shortcut : bdv
+
+  - name : sogou
+    engine : sogou
+    shortcut : sg
+
+  - name : sogou images
+    engine : sogou_images
+    shortcut : sgi
+
+  - name : sogou videos
+    engine : sogou_videos
+    shortcut : sgv
+
+  - name : 360sousuo
+    engine : so
+    shortcut : 360
+
+  - name : 360 images
+    engine : so_images
+    shortcut : 360i
+
 
 #  - name : yacy
 #    engine : yacy
@@ -767,8 +837,8 @@ locales:
     sv : Svenska (Swedish)
     tr : Türkçe (Turkish)
     uk : українська мова (Ukrainian)
-    zh : 中文 (Chinese)
-    zh_TW : 國語 (Taiwanese Mandarin)
+    zh : 简体中文 (Chinese, Simplified)
+    zh_TW : 繁體中文 (Chinese, Traditional)
 
 doi_resolvers :
   oadoi.org : 'https://oadoi.org/'
@@ -777,3 +847,6 @@ doi_resolvers :
   sci-hub.tw : 'http://sci-hub.tw/'
 
 default_doi_resolver : 'oadoi.org'
+
+sentry:
+  dsn: https://xkdkkdkdkdkdkdkdk@sentry.xxx.com/2
